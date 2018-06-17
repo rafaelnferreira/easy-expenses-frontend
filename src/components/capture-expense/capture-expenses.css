@@ -1,0 +1,64 @@
+.save-message {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    -webkit-animation: fadein 0.3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.3s; /* Firefox < 16 */
+        -ms-animation: fadein 0.3s; /* Internet Explorer */
+         -o-animation: fadein 0.3s; /* Opera < 12.1 */
+            animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.save-snack{
+    -webkit-animation: slide-from-left 0.5s ; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+    animation: slide-from-left 0.5s ;
+    animation-timing-function: linear;
+    
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slide-from-left {
+    from {left: 100%;}
+    to {left: 0px;}
+}
+
+@keyframes slide-from-left {
+    from {left: 100%;}
+    to {left: 0px;}
+}
+
+.layer {
+    height: 100vh;
+    background-color: grey;
+    opacity: 0.60;
+}
+
+.saved-state{
+    opacity: 0.3;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.container label {
+    margin: 0;
+}

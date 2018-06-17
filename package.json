@@ -1,0 +1,28 @@
+{
+  "name": "easy-expenses-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "moment": "^2.22.0",
+    "react": "^16.3.1",
+    "react-datepicker": "^1.4.1",
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "1.x",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start-dev": "react-scripts start",
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
+  },
+  "proxy": "http://localhost:3001"
+}

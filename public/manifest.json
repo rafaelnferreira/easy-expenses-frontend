@@ -1,0 +1,16 @@
+{
+  "short_name": "My Expenses",
+  "name": "My Expenses - Easy control in your spreadsheet",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "144x144 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#1b08ff",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
+}

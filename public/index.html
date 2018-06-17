@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script>
+    var host = "easyexpenses.herokuapp.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    }                                      
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap/bootstrap.min.css">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // this is to load the Google API (as a promise)
+    var gapiPromise = (function () {
+      var deferred = $.Deferred();
+      window.onLoadCallback = function () {
+        deferred.resolve(gapi);
+      };
+      return deferred.promise()
+    }());
+
+    var authInited = (function () {
+      var deferred = $.Deferred();
+      window.onAuthInit = function () {
+        deferred.resolve(gapi.auth2);
+      };
+      return deferred.promise()
+    }());
+
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119131227-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119131227-1');
+  </script>
+
+
+  <title>Easy Expenses</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="%PUBLIC_URL%/js/bootstrap/bootstrap.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+</body>
+</body>
+
+</html>
